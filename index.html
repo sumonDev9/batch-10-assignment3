@@ -1,439 +1,587 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rinterio House</title>
-    <!-- Manrope font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <!-- daisyui and tailwindcss -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <!-- tailwind css configuration -->
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-                primary: '#212121',
-                secondary: '#494949',
-                netural: '#737373',
-                button_color: "#ABEF5F",
-              },
-              fontFamily:{
-                Manrope: 'Manrope'
-              },
-              backgroundImage: {
-                Lets_connect: "url('./assets/bg.jpg')"
-              }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rinterio House</title>
+  <!-- Manrope font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <!-- daisyui and tailwindcss -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- tailwind css configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            primary: '#212121',
+            secondary: '#494949',
+            netural: '#737373',
+            button_color: "#ABEF5F",
+          },
+          fontFamily: {
+            Manrope: 'Manrope'
+          },
+          backgroundImage: {
+            Lets_connect: "url('./assets/bg.jpg')"
           }
         }
-      </script>
+      }
+    }
+  </script>
 </head>
+
 <body class="font-Manrope">
-   
-    <!-- header start here -->
-     <header class="w-11/12 mx-auto">
-        <!-- navbar start here -->
-      <nav>
-        <div class="navbar p-0 py-3">
-            <!-- left side -->
-            <div class="navbar-start">
-            <a class="text-[26px] lg:text-3xl flex  gap-2 items-center font-extrabold"><div class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div> Rinterio</a>
-            </div>
-            <!-- middle side -->
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1 text-[#737373]">
-                    <li><a class="text-secondary font-extrabold hover:bg-transparent">Home</a></li>
-                    <li><a class="hover:bg-transparent">Services</a></li>
-                    <li><a class="hover:bg-transparent">Portfolio</a></li>
-                    <li><a class="hover:bg-transparent">Blogs</a></li>
-                    <li><a class="hover:bg-transparent">Contact Us</a></li>
-                  </ul>
-            </div>
-            <!-- right side -->
-            <div class="navbar-end  flex gap-4">
-                <!-- search -->
-                <div class="btn-circle btn hidden md:flex bg-[#E9E9E9] border-solid border-1 border-[rgb(233, 233, 233)]  text-lg justify-center flex items-center">
-                    <i class="fa-solid fa-magnifying-glass text-netural"></i>
-                </div>
-                <!-- cart -->
-                <div class="btn-circle btn hidden md:flex bg-[#E9E9E9] border-1 border-[rgb(233, 233, 233)] text-lg flex justify-center items-center">
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 text-netural"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <a href="#" class="btn bg-button_color  rounded-full text-xl font-extrabold hidden md:flex">Book Consult <div class="w-8 h-8 bg-[#1C1C1C] text-lg justify-center flex items-center rounded-full"><i class="fa-solid fa-arrow-right  text-white -rotate-45"></i></div></a>
-                 <!-- dropdown -->
-                 <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden btn-circle border-1 border-[rgb(233, 233, 233)] btn bg-[#E9E9E9] rounded-[50px]">
-                        <i class="fa-solid fa-bars text-netural"></i>
-                    </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 right-0 gap-2 shadow">
-                      <li><a class="text-secondary font-extrabold">Home</a></li>
-                      <li><a>Services</a></li>
-                      <li><a>Portfolio</a></li>
-                      <li><a>Blogs</a></li>
-                      <li><a>Contact Us</a></li>
-                   </ul>
-                  </div>
-            </div>
-          </div>
-      </nav>
-        <!-- navbar end here -->
 
-        <!-- bannar start here -->
-        <div class="hero mt-5 md:mt-1">
-            <div class="hero-content text-center">
-              <div class="max-w-4xl">
-                <img src="./assets/banner.png" class="mx-auto mb-4 md:mb-6" alt="">
-                <h1 class="text-2xl md:text-4xl lg:text-5xl font-extrabold text-primar">A barn house of this design has a striking appearance</h1>
-                <p class="mt-4 md:mt-6  max-w-3xl mx-auto font-medium text-secondar">
-                    This barn house features a steep gable roof, large windows, and natural wood siding. Its modern rustic design creates a striking appearance, blending traditional charm with contemporary elegance.
-                </p>
-                <a class="btn w-full md:w-auto bg-[#c7f195] rounded-full text-xl font-bold mt-4 md:mt-8 text-primary border-1 border-[rgb(171, 239, 95)]">View Details <div class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i class="fa-solid fa-arrow-right text-[#1C1C1C] -rotate-45"></i></div></a>
-              </div>
-            </div>
-          </div>
-        <!-- bannar end here -->
-     </header>
-    <!-- header end here -->
-
-    <!-- main start here -->
-     <main class="mt-10 md:mt-20">
-
-        <!-- about us start here -->
-         <section class="bg-[#E9E9E9] pt-12">
-         <div class="w-11/12 mx-auto">
-          <!-- about -->
-          <div class="hero flex justify-between  items-start flex-col lg:flex-row gap-8">
-            <!-- content part-->
-            <div class="space-y-5 max-w-xl">
-
-              <img src="./assets/Vector.png" class="mb-3 relative -left-5 w-24 hidden lg:block" alt="">
-              <div class="text-center lg:text-start">
-                <a href="#" class="px-3 py-2 bg-white rounded-full text-secondary font-bold text-center lg:text-start"><i class="fa-solid fa-arrow-right"></i> About Us</a>
-              </div>
-              <h1 class="text-2xl md:text-3xl lg:text-4xl max-w-md font-extrabold text-primary text-center lg:text-start">We design thoughtful, liveable spaces</h1>
-              <p class="text-secondary font-medium text-center lg:text-start">We design thoughtful, liveable spaces that blend functionality with aesthetic appeal, creating environments that enhance everyday living and inspire comfort.</p>
-
-              <div class="flex bg-white p-6 gap-3 rounded-2xl">
-                <div>
-                  <img src="./assets/commercial.png" class="w-full" alt="">
-                </div>
-                <!-- content -->
-                <div>
-                 <h2 class="text-secondary font-extrabold text-xl">Commercial</h2>
-                 <p class="text-netural font-medium">Boost sales with our premium, eco-friendly products. Transform your business.</p>
-                </div>
-              </div>
-
-              <div class="flex  bg-white p-6 gap-3 rounded-2xl">
-                <div>
-                  <img src="./assets/residential.png" class="w-full" alt="">
-                </div>
-                <!-- content -->
-                <div>
-                 <h2 class="text-secondary font-extrabold text-xl">Residential</h2>
-                 <p class="text-netural font-medium">Discover cozy, modern living spaces designed for your comfort and style.</p>
-                </div>
-              </div>
-
-            </div>
-            <!-- img part-->
-             <div>
-              <img src="./assets/Rectangle.png" class="w-full " alt="" >
-             </div>
-          </div>
-
-         </div>
-         </section>
-        <!-- about us end here -->
-
-        <!-- count Process start here -->
-   <section class="bg-[#E9E9E9] pt-8 lg:pt-28 ">
-    <div class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-9 p-8  bg-white text-center">
-      <!-- box 1 -->
-       <div class="space-y-2">
-        <img src="./assets/review.png" class="w-16 mx-auto"  alt="">
-        <h2 class="text-secondary font-extrabold text-3xl lg:text-4xl">235+</h2>
-        <p class="text-netural font-medium">Happy Client Review</p>
-       </div>
-      <!-- box 2 -->
-       <div class="space-y-2">
-        <img src="./assets/department.png" class="w-16 mx-auto" alt="">
-        <h2 class="text-secondary font-extrabold text-3xl lg:text-4xl">50+</h2>
-        <p class="text-netural font-medium">Work Departments</p>
-       </div>
-      <!-- box 3 -->
-       <div class="space-y-2">
-        <img src="./assets/clianet.png" class="w-16 mx-auto" alt="">
-        <h2 class="text-secondary font-extrabold text-3xl lg:text-4xl">30k+</h2>
-        <p class="text-netural font-medium">Our Happy Client</p>
-       </div> 
-      <!-- box 4 -->
-       <div class="space-y-2">
-        <img src="./assets/team.png" class="w-16 mx-auto" alt="">
-        <h2 class="text-secondary font-extrabold text-3xl lg:text-4xl">307+</h2>
-        <p class="text-netural font-medium">Staff Members</p>
-       </div>
-     </div>
-   </section>
-        <!-- count Process end here -->
-
-        <!-- Our Works Process start here -->
-         <section class="bg-[#E9E9E9] pt-8 md:pt-16 lg:pt-24 lg:pb-12">
-          <div class="w-11/12 mx-auto">
-            <!-- heading -->
-            <div class="text-center max-w-3xl mx-auto space-y-6">
-              <a href="#" class="px-4 py-2 bg-white rounded-3xl text-secondary font-bold"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp; How we works</a>
-              <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter">Our Works Process</h1>
-              <p class="font-medium text-secondary">This is streamlined and transparent, involving meticulous planning, innovative development, rigorous testing, and timely delivery to ensure high-quality outcomes and client satisfaction</p>
-            </div>
-
-            <!-- Process content -->
-             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-6 lg:mt-8">
-              <!-- card 1 -->
-               <div class="p-6 rounded-2xl bg-[#E7C1D3] space-y-2">
-                <img src="./assets/concept.png" alt="">
-                <h2 class="text-[#1C1C1C] text-xl font-extrabold tracking-tighter">Concept</h2>
-                <p class="text-secondary font-medium">Creative concepts that inspire impactful and functional solutions</p>
-               </div>
-              <!-- card 2 -->
-               <div class="p-6 rounded-2xl bg-[#EFDA6E] space-y-2">
-                <img src="./assets/flow-chart.png" alt="">
-                <h2 class="text-[#1C1C1C] text-xl font-extrabold tracking-tighter">Design Process</h2>
-                <p class="text-secondary font-medium">Streamlined design process focused on creativity, precision, and innovation.</p>
-               </div>
-              <!-- card 3 -->
-               <div class="p-6 rounded-2xl bg-[#A4DAC3] space-y-2">
-                <img src="./assets/vision.png" alt="">
-                <h2 class="text-[#1C1C1C] text-xl font-extrabold tracking-tighter">Supervision</h2>
-                <p class="text-secondary font-medium">Effective supervision ensuring quality, guidance, and project success.</p>
-               </div>
-              <!-- card 4 -->
-               <div class="p-6 rounded-2xl bg-[#77AAEA] space-y-2">
-                <img src="./assets/budget-planning.png" alt="">
-                <h2 class="text-[#1C1C1C] text-xl font-extrabold tracking-tighter">Budget Planning</h2>
-                <p class="text-secondary font-medium">Strategic budget planning for optimal resource allocation and cost efficiency.</p>
-               </div>
-             </div>
-          </div>
-         </section>
-        <!-- Our Works Process end here -->
-
-        <!-- Our Latest Portfolio start here -->
-        <section class="bg-[#E9E9E9]  lg:bg-[white] pt-8 md:pt-16 lg:pt-24">
-          <div class="w-11/12 mx-auto">
-              <!-- heading -->
-              <div class="text-center max-w-3xl mx-auto space-y-6">
-                <a href="#" class="px-4 py-2 bg-[#ABEF5F33] rounded-3xl text-secondary font-bold"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp; Explore our Latest works</a>
-                <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter">Our Latest Portfolio</h1>
-                <p class="font-medium text-secondary">Our latest portfolio showcases diverse, innovative projects that highlight our expertise in design, development, and execution, delivering exceptional results tailored to client needs.</p>
-              </div>
-  
-              <!-- Portfolio -->
-              <div class="grid gird-cols-1 lg:grid-cols-12  mt-6  gap-6 pb-16">
-                <!-- div 1 -->
-                  
-                      <div class="flex  flex-col md:flex-row col-span-4 md:col-span-6 lg:col-span-9 gap-6 p-6 border-2  border-[rgb(233, 233, 233)] rounded-2xl bg-[white]">
-                          <!-- img -->
-                          <div>
-                            <img src="./assets/img1.png" class="w-full lg:w-72 bg-cover h-full" alt="">
-                          </div>
-                          <div class="space-y-4">
-                            <h2 class="text-2xl text-secondary font-extrabold">Commercial</h2>
-                            <p class="text-netural font-mediu">Commercial solutions tailored to drive business growth, offering innovative strategies, market insights.</p>
-                            <h2 class="flex text-primary text-xl font-extrabold tracking-tighter">View Details &nbsp;&nbsp; <div class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div></h2>
-                          </div>
-                        </div>
-                  
-                  <!-- div 2 -->
-                  <div class="border-2  border-[rgb(233, 233, 233)] col-span-4 md:col-span-3 lg:col-span-3 rounded-2xl  bg-[white]  p-6">
-                      <img src="./assets/img2.png" class="mx-auto h-44 w-full" alt="">
-                     </div>
-                  <!-- div 3 -->
-                  <div class="border-2  border-[rgb(233, 233, 233)] rounded-2xl col-span-4 md:col-span-3 bg-[white] lg:hidden block p-6">
-                      <img src="./assets/img5.png" class="w-80 h-44" alt="">
-                     </div>
-                  <!-- div 4 -->
-                  <div class="border-2  border-[rgb(233, 233, 233)] rounded-2xl col-span-4 md:col-span-3 bg-[white] order-2 lg:order-1  p-6">
-                      <img src="./assets/img3.png" class="mx-auto h-48 w-full" alt="">
-                    </div>
-                  <!-- div 5 -->
-                  <div class="flex flex-col md:flex-row col-span-4 md:col-span-6 gap-6 p-6 border-2  border-[rgb(233, 233, 233)] rounded-2xl order-1 bg-[white] lg:order-2">
-                      <!-- img -->
-                      <div>
-                        <img src="./assets/img4.png" class="w-full lg:w-72 bg-cover h-full" alt="">
-                      </div>
-                      <div class="space-y-4">
-                        <h2 class="text-2xl text-secondary font-extrabold">Commercial</h2>
-                        <p class="text-netural font-mediu">Maximize efficiency with our innovative solutions tailored for your business.</p>
-                        <h2 class="flex text-primary text-xl font-extrabold tracking-tighter">View Details &nbsp;&nbsp; <div class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div></h2>
-                      </div>
-                    </div>
-                  <!-- div 6 -->
-                  <div class="border-2  border-[rgb(233, 233, 233)] rounded-2xl col-span-4 md:col-span-3 bg-[white] order-3 p-6">
-                      <img src="./assets/img5.png" class="mx-auto w-full h-48" alt="">
-                     </div>
-            </div>
-          </div>
-    </section>
-        <!-- Our Latest Portfolio end here -->
-
-        <!-- challange part start here -->
-         <section></section>
-        <!-- challange part end here -->
-
-        <!-- Read Our Articles and News start here -->
-         <section class="bg-[#F4F4F4] py-8 md:py-24">
-          <div class="w-11/12 mx-auto">
-             <!-- heading -->
-             <div class="text-center max-w-3xl mx-auto space-y-6">
-              <a href="#" class="px-4 py-2 bg-[#ABEF5F33] rounded-3xl text-secondary font-bold"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp; Rinterio News</a>
-              <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter">Read Our Articles and News</h1>
-              <p class="font-medium text-secondary">Explore our articles and news for the latest insights, trends, and updates across various industries, offering valuable information to keep you informed and ahead.</p>
-            </div>
-
-            <!-- card -->
-             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
-              <!-- card 1 -->
-              <div class="card  md:flex md:flex-row lg:flex-col bg-white rounded-2xl">
-                <figure class="px-6 pt-6 md:pb-6 lg:pb-0">
-                  <img  src="./assets/article1.png" class="w-full h-full" alt="Shoes" />
-                </figure>
-                <div class="card-body space-y-2">
-                  <!-- date and admin -->
-                  <div class="flex gap-4">
-                    <span class="text-netural text-sm  font-medium flex"><img src="./assets/calendar.png"class="w-5 text-netural" alt="">&nbsp;&nbsp; August24, 2024</span>
-                  <span class="text-netural text-sm font-medium flex"><img src="./assets/profile.png"class="w-5 text-netural" alt="">&nbsp;&nbsp; By Admin</span>
-                  </div>
-                  <!-- text-content -->
-                   <h1 class="text-secondary text-xl font-extrabold tracking-tighter">How to choose the furniture right  of your home.</h1>
-                   <p class="text-netural font-medium">Discover tips for choosing the perfect furniture to suit your home.</p>
-                   <h2 class="flex text-primary text-lg font-extrabold tracking-tighter">Read More &nbsp;&nbsp; <div class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div></h2>
-                </div>
-              </div>
-              <!-- card 2 -->
-              <div class="card md:flex md:flex-row lg:flex-col bg-white rounded-2xl">
-                <figure class="px-6 pt-6 md:pb-6 lg:pb-0">
-                  <img  src="./assets/article2.png" class="w-full h-full" alt="Shoes" />
-                </figure>
-                <div class="card-body space-y-2">
-                  <!-- date and admin -->
-                  <div class="flex gap-4">
-                    <span class="text-netural text-sm  font-medium flex"><img src="./assets/calendar.png"class="w-5 text-netural" alt="">&nbsp;&nbsp; August24, 2024</span>
-                  <span class="text-netural text-sm font-medium flex"><img src="./assets/profile.png"class="w-5 text-netural" alt="">&nbsp;&nbsp; By Admin</span>
-                  </div>
-                  <!-- text-content -->
-                   <h1 class="text-secondary text-xl font-extrabold tracking-tighter">How to choose the furniture right  of your home.</h1>
-                   <p class="text-netural font-medium">Discover tips for choosing the perfect furniture to suit your home.</p>
-                   <h2 class="flex text-primary text-lg font-extrabold tracking-tighter">Read More &nbsp;&nbsp; <div class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div></h2>
-                </div>
-              </div>
-               <!-- card 3 -->
-               <div class="card md:flex md:flex-row lg:flex-col bg-white rounded-2xl">
-                <figure class="px-6 pt-6 md:pb-6 lg:pb-0">
-                  <img  src="./assets/article3.png" class="w-full h-full" alt="Shoes" />
-                </figure>
-                <div class="card-body space-y-2">
-                  <!-- date and admin -->
-                  <div class="flex gap-4">
-                    <span class="text-netural text-sm  font-medium flex"><img src="./assets/calendar.png"class="w-5 text-netural" alt="">&nbsp;&nbsp; August24, 2024</span>
-                  <span class="text-netural text-sm font-medium flex"><img src="./assets/profile.png"class="w-5 text-netural" alt="">&nbsp;&nbsp; By Admin</span>
-                  </div>
-                  <!-- text-content -->
-                   <h1 class="text-secondary text-xl font-extrabold tracking-tighter">How to choose the furniture right  of your home.</h1>
-                   <p class="text-netural font-medium">Discover tips for choosing the perfect furniture to suit your home.</p>
-                   <h2 class="flex text-primary text-lg font-extrabold tracking-tighter">Read More &nbsp;&nbsp; <div class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div></h2>
-                </div>
-              </div>
-             </div>
-          </div>
-         </section>
-        <!-- Read Our Articles and News end here -->
-
-        <!-- Let’s Connect start here -->
-         <section class="bg-Lets_connect bg-no-repeat bg-cover py-8 md:py-20 mt-2">
-          <div class="w-11/12 mx-auto">
-              <!-- heading -->
-              <div class="text-center max-w-4xl mx-auto space-y-6">
-                <a href="#" class="px-4 py-2 bg-[#ABEF5F33] rounded-3xl text-secondary font-bold"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp; Let’s Connect</a>
-                <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter">Let’s Discuss Next Project</h1>
-                <p class="font-medium text-secondary">Could you please provide more details about what you're looking for in the next project? Are you asking for ideas for project concepts.</p>
-              </div>
-
-              <!-- contact form fillup -->
-              <form action="#">
-               <div class="max-w-screen-md mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                  <!-- First Name -->
-                  <div>
-                   <input type="text" class="p-4 border-2 border-[rgb(233, 233, 233)] w-full rounded-3xl outline-none placeholder:text-[#A0A0A0] font-medium" placeholder="First Name*">
-                 </div>
-                 <!-- Last Name -->
-                 <div>
-                   <input type="text" class="p-4 border-2 border-[rgb(233, 233, 233)] w-full rounded-3xl outline-none placeholder:text-[#A0A0A0] font-medium" placeholder="Last Name*">  
-                 </div>
-                 <!-- Phone Number* -->
-                 <div>
-                   <input type="text" class="p-4 border-2 border-[rgb(233, 233, 233)] w-full rounded-3xl outline-none placeholder:text-[#A0A0A0] font-medium" placeholder="Phone Number*">  
-                 </div>
-                 <!-- Email Number* -->
-                 <div>
-                   <input type="text" class="p-4 border-2 border-[rgb(233, 233, 233)] w-full rounded-3xl outline-none placeholder:text-[#A0A0A0] font-medium" placeholder="Email Number*">  
-                 </div>
-                 <!-- textarea -->
-                 
-                   <textarea class="md:col-span-2 resize-none rounded-3xl border-2 border-[rgb(233, 233, 233)] outline-none p-6 placeholder:text-[#A0A0A0] font-medium" rows="6" placeholder="Write your message here"></textarea>
-                  
-                  <!-- submit -->
-                  <button type="submit" class="bg-button_color  md:col-span-2 flex justify-center items-center py-2 gap-2 rounded-full text-xl font-extrabold">Send Mail <div class="w-8 h-8 bg-[#1C1C1C] text-lg justify-center flex items-center rounded-full"><i class="fa-solid fa-arrow-right  text-white -rotate-45"></i></div></button>
-                  </div>
-                  </div>
-              </form>
-          
-         </section>
-        <!-- Let’s Connect end here -->
-
-     </main>
-    <!-- main end here -->
-
-    <!-- footer start here -->
-    <footer class="footer footer-center bg-[#1C1C1C] py-16 mt-2 mb-1">
-      <aside>
-        <!-- button -->
-        <a class="text-3xl lg:text-3xl flex  gap-2 items-center font-extrabold text-[#E9E9E9]"><div class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div> Rinterio</a>
-       <p class="max-w-2xl text-netural font-medium mt-4">Rinterio offers innovative house design solutions with a focus on modern aesthetics, functionality, and personalized client experiences.</p>
-       </aside>
-       <nav>
-         <div class="grid grid-flow-row md:grid-flow-col text-[#E9E9E9] gap-8 md:gap-24">
-          <a href="#">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Portfolio</a>
-          <a href="#">Blogs</a>
-          <a href="#">Contact Us</a>
+  <!-- header start here -->
+  <header class="w-11/12 mx-auto">
+    <!-- navbar start here -->
+    <nav>
+      <div class="navbar p-0 py-3">
+        <!-- left side -->
+        <div class="navbar-start">
+          <a class="text-[26px] lg:text-3xl flex  gap-2 items-center font-extrabold">
+            <div class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i
+                class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div> Rinterio
+          </a>
         </div>
-       </nav>
-       <a class="btn w-full md:w-auto bg-button_color rounded-full text-xl font-extrabold tracking-tighter mt-4 md:mt-8 text-primary flex">Book Consult <div class="w-8 h-8 bg-[#1C1C1C] text-lg justify-center flex items-center rounded-full"><i class="fa-solid fa-arrow-right text-white -rotate-45"></i></div></a>
-    </footer>
-    <!-- footer end here -->
+        <!-- middle side -->
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 text-[#737373]">
+            <li><a class="text-secondary font-extrabold hover:bg-transparent">Home</a></li>
+            <li><a class="hover:bg-transparent">Services</a></li>
+            <li><a class="hover:bg-transparent">Portfolio</a></li>
+            <li><a class="hover:bg-transparent">Blogs</a></li>
+            <li><a class="hover:bg-transparent">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- right side -->
+        <div class="navbar-end  flex gap-4">
+          <!-- search -->
+          <div
+            class="btn-circle btn hidden md:flex bg-[#E9E9E9] border-solid border-1 border-[rgb(233, 233, 233)]  text-lg justify-center flex items-center">
+            <i class="fa-solid fa-magnifying-glass text-netural"></i>
+          </div>
+          <!-- cart -->
+          <div
+            class="btn-circle btn hidden md:flex bg-[#E9E9E9] border-1 border-[rgb(233, 233, 233)] text-lg flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-netural" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <a href="#" class="btn bg-button_color  rounded-full text-xl font-extrabold hidden md:flex">Book Consult <div
+              class="w-8 h-8 bg-[#1C1C1C] text-lg justify-center flex items-center rounded-full"><i
+                class="fa-solid fa-arrow-right  text-white -rotate-45"></i></div></a>
+          <!-- dropdown -->
+          <div class="dropdown">
+            <div tabindex="0" role="button"
+              class="btn btn-ghost lg:hidden btn-circle border-1 border-[rgb(233, 233, 233)] btn bg-[#E9E9E9] rounded-[50px]">
+              <i class="fa-solid fa-bars text-netural"></i>
+            </div>
+            <ul tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 right-0 gap-2 shadow">
+              <li><a class="text-secondary font-extrabold">Home</a></li>
+              <li><a>Services</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>Blogs</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end here -->
+
+    <!-- bannar start here -->
+    <div class="hero mt-5 md:mt-1">
+      <div class="hero-content text-center">
+        <div class="max-w-4xl">
+          <img src="./assets/banner.png" class="mx-auto mb-4 md:mb-6" alt="">
+          <h1 class="text-2xl md:text-4xl lg:text-5xl font-extrabold text-primar">A barn house of this design has a
+            striking appearance</h1>
+          <p class="mt-4 md:mt-6  max-w-3xl mx-auto font-medium text-secondar">
+            This barn house features a steep gable roof, large windows, and natural wood siding. Its modern rustic
+            design creates a striking appearance, blending traditional charm with contemporary elegance.
+          </p>
+          <a
+            class="btn w-full md:w-auto bg-[#c7f195] rounded-full text-xl font-bold mt-4 md:mt-8 text-primary border-1 border-[rgb(171, 239, 95)]">View
+            Details <div class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i
+                class="fa-solid fa-arrow-right text-[#1C1C1C] -rotate-45"></i></div></a>
+        </div>
+      </div>
+    </div>
+    <!-- bannar end here -->
+  </header>
+  <!-- header end here -->
+
+  <!-- main start here -->
+  <main class="mt-10 md:mt-20">
+
+    <!-- about us start here -->
+    <section class="bg-[#E9E9E9] pt-12">
+      <div class="w-11/12 mx-auto">
+        <!-- about -->
+        <div class="hero flex justify-between  items-start flex-col lg:flex-row gap-8">
+          <!-- content part-->
+          <div class="space-y-5 max-w-xl">
+
+            <img src="./assets/Vector.png" class="mb-3 relative -left-5 w-24 hidden lg:block" alt="">
+            <div class="text-center lg:text-start">
+              <a href="#" class="px-3 py-2 bg-white rounded-full text-secondary font-bold text-center lg:text-start"><i
+                  class="fa-solid fa-arrow-right"></i> About Us</a>
+            </div>
+            <h1 class="text-2xl md:text-3xl lg:text-4xl max-w-md font-extrabold text-primary text-center lg:text-start">
+              We design thoughtful, liveable spaces</h1>
+            <p class="text-secondary font-medium text-center lg:text-start">We design thoughtful, liveable spaces that
+              blend functionality with aesthetic appeal, creating environments that enhance everyday living and inspire
+              comfort.</p>
+
+            <div class="flex bg-white p-6 gap-3 rounded-2xl">
+              <div>
+                <img src="./assets/commercial.png" class="w-full" alt="">
+              </div>
+              <!-- content -->
+              <div>
+                <h2 class="text-secondary font-extrabold text-xl">Commercial</h2>
+                <p class="text-netural font-medium">Boost sales with our premium, eco-friendly products. Transform your
+                  business.</p>
+              </div>
+            </div>
+
+            <div class="flex  bg-white p-6 gap-3 rounded-2xl">
+              <div>
+                <img src="./assets/residential.png" class="w-full" alt="">
+              </div>
+              <!-- content -->
+              <div>
+                <h2 class="text-secondary font-extrabold text-xl">Residential</h2>
+                <p class="text-netural font-medium">Discover cozy, modern living spaces designed for your comfort and
+                  style.</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- img part-->
+          <div>
+            <img src="./assets/Rectangle.png" class="w-full " alt="">
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- about us end here -->
+
+    <!-- count Process start here -->
+    <section class="bg-[#E9E9E9] pt-8 lg:pt-28">
+      <div
+        class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-9 p-8 rounded-3xl  bg-white text-center">
+        <!-- box 1 -->
+        <div class="space-y-2">
+          <img src="./assets/review.png" class="w-16 mx-auto" alt="">
+          <h2 class="text-secondary font-extrabold text-3xl lg:text-4xl">235+</h2>
+          <p class="text-netural font-medium">Happy Client Review</p>
+        </div>
+        <!-- box 2 -->
+        <div class="space-y-2">
+          <img src="./assets/department.png" class="w-16 mx-auto" alt="">
+          <h2 class="text-secondary font-extrabold text-3xl lg:text-4xl">50+</h2>
+          <p class="text-netural font-medium">Work Departments</p>
+        </div>
+        <!-- box 3 -->
+        <div class="space-y-2">
+          <img src="./assets/clianet.png" class="w-16 mx-auto" alt="">
+          <h2 class="text-secondary font-extrabold text-3xl lg:text-4xl">30k+</h2>
+          <p class="text-netural font-medium">Our Happy Client</p>
+        </div>
+        <!-- box 4 -->
+        <div class="space-y-2">
+          <img src="./assets/team.png" class="w-16 mx-auto" alt="">
+          <h2 class="text-secondary font-extrabold text-3xl lg:text-4xl">307+</h2>
+          <p class="text-netural font-medium">Staff Members</p>
+        </div>
+      </div>
+    </section>
+    <!-- count Process end here -->
+
+    <!-- Our Works Process start here -->
+    <section class="bg-[#E9E9E9] pt-8 md:pt-16 lg:pt-24 lg:pb-12">
+      <div class="w-11/12 mx-auto">
+        <!-- heading -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <a href="#" class="px-4 py-2 bg-white rounded-3xl text-secondary font-bold"><i
+              class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp; How we works</a>
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter">Our Works Process</h1>
+          <p class="font-medium text-secondary">This is streamlined and transparent, involving meticulous planning,
+            innovative development, rigorous testing, and timely delivery to ensure high-quality outcomes and client
+            satisfaction</p>
+        </div>
+
+        <!-- Process content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-6 lg:mt-8">
+          <!-- card 1 -->
+          <div class="p-6 rounded-2xl bg-[#E7C1D3] space-y-2">
+            <img src="./assets/concept.png" alt="">
+            <h2 class="text-[#1C1C1C] text-xl font-extrabold tracking-tighter">Concept</h2>
+            <p class="text-secondary font-medium">Creative concepts that inspire impactful and functional solutions</p>
+          </div>
+          <!-- card 2 -->
+          <div class="p-6 rounded-2xl bg-[#EFDA6E] space-y-2">
+            <img src="./assets/flow-chart.png" alt="">
+            <h2 class="text-[#1C1C1C] text-xl font-extrabold tracking-tighter">Design Process</h2>
+            <p class="text-secondary font-medium">Streamlined design process focused on creativity, precision, and
+              innovation.</p>
+          </div>
+          <!-- card 3 -->
+          <div class="p-6 rounded-2xl bg-[#A4DAC3] space-y-2">
+            <img src="./assets/vision.png" alt="">
+            <h2 class="text-[#1C1C1C] text-xl font-extrabold tracking-tighter">Supervision</h2>
+            <p class="text-secondary font-medium">Effective supervision ensuring quality, guidance, and project success.
+            </p>
+          </div>
+          <!-- card 4 -->
+          <div class="p-6 rounded-2xl bg-[#77AAEA] space-y-2">
+            <img src="./assets/budget-planning.png" alt="">
+            <h2 class="text-[#1C1C1C] text-xl font-extrabold tracking-tighter">Budget Planning</h2>
+            <p class="text-secondary font-medium">Strategic budget planning for optimal resource allocation and cost
+              efficiency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Works Process end here -->
+
+    <!-- Our Latest Portfolio start here -->
+    <section class="bg-[#E9E9E9]  lg:bg-[white] pt-8 md:pt-16 lg:pt-24">
+      <div class="w-11/12 mx-auto">
+        <!-- heading -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <a href="#" class="px-4 py-2 bg-[#ABEF5F33] rounded-3xl text-secondary font-bold"><i
+              class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp; Explore our Latest works</a>
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter">Our Latest Portfolio</h1>
+          <p class="font-medium text-secondary">Our latest portfolio showcases diverse, innovative projects that
+            highlight our expertise in design, development, and execution, delivering exceptional results tailored to
+            client needs.</p>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="grid gird-cols-1 lg:grid-cols-12  mt-6  gap-6 pb-16">
+          <!-- div 1 -->
+
+          <div
+            class="flex  flex-col md:flex-row col-span-4 md:col-span-6 lg:col-span-9 gap-6 p-6 border-2  border-[rgb(233, 233, 233)] rounded-2xl bg-[white]">
+            <!-- img -->
+            <div>
+              <img src="./assets/img1.png" class="w-full lg:w-72 bg-cover h-full" alt="">
+            </div>
+            <div class="space-y-4">
+              <h2 class="text-2xl text-secondary font-extrabold">Commercial</h2>
+              <p class="text-netural font-mediu">Commercial solutions tailored to drive business growth, offering
+                innovative strategies, market insights.</p>
+              <h2 class="flex text-primary text-xl font-extrabold tracking-tighter">View Details &nbsp;&nbsp; <div
+                  class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i
+                    class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div>
+              </h2>
+            </div>
+          </div>
+
+          <!-- div 2 -->
+          <div
+            class="border-2  border-[rgb(233, 233, 233)] col-span-4 md:col-span-3 lg:col-span-3 rounded-2xl  bg-[white]  p-6">
+            <img src="./assets/img2.png" class="mx-auto h-44 w-full" alt="">
+          </div>
+          <!-- div 3 -->
+          <div
+            class="border-2  border-[rgb(233, 233, 233)] rounded-2xl col-span-4 md:col-span-3 bg-[white] lg:hidden block p-6">
+            <img src="./assets/img5.png" class="w-80 h-44" alt="">
+          </div>
+          <!-- div 4 -->
+          <div
+            class="border-2  border-[rgb(233, 233, 233)] rounded-2xl col-span-4 md:col-span-3 bg-[white] order-2 lg:order-1  p-6">
+            <img src="./assets/img3.png" class="mx-auto h-48 w-full" alt="">
+          </div>
+          <!-- div 5 -->
+          <div
+            class="flex flex-col md:flex-row col-span-4 md:col-span-6 gap-6 p-6 border-2  border-[rgb(233, 233, 233)] rounded-2xl order-1 bg-[white] lg:order-2">
+            <!-- img -->
+            <div>
+              <img src="./assets/img4.png" class="w-full lg:w-72 bg-cover h-full" alt="">
+            </div>
+            <div class="space-y-4">
+              <h2 class="text-2xl text-secondary font-extrabold">Commercial</h2>
+              <p class="text-netural font-mediu">Maximize efficiency with our innovative solutions tailored for your
+                business.</p>
+              <h2 class="flex text-primary text-xl font-extrabold tracking-tighter">View Details &nbsp;&nbsp; <div
+                  class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i
+                    class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div>
+              </h2>
+            </div>
+          </div>
+          <!-- div 6 -->
+          <div
+            class="border-2  border-[rgb(233, 233, 233)] rounded-2xl col-span-4 md:col-span-3 bg-[white] order-3 p-6">
+            <img src="./assets/img5.png" class="mx-auto w-full h-48" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Latest Portfolio end here -->
+
+    <!-- challange Testimonials  part start here -->
+    <section class="bg-[#F4F4F4] py-8 md:pt-16">
+      <div class="w-11/12 mx-auto">
+        <!-- heading -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <a href="#" class="px-4 py-2 bg-[#ABEF5F33] rounded-3xl text-secondary font-bold"><i
+              class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp; Testimonials</a>
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter">What Clients Say</h1>
+          <p class="font-medium text-secondary">Hear from our satisfied clients about their experiences, showcasing the
+            quality, creativity, and dedication we bring to every design project.</p>
+        </div>
+        <!--  -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-16">
+          <!-- client say 1 -->
+          <div class="bg-[#e9d9e0] shadow p-5 rounded-bl-[80px] rounded-2xl">
+            <i class="fas fa-quote-left text-7xl mb-4 text-[#313131]"></i>
+            <p class="mb-4 text-secondary font-medium">Top-notch service! Their expertise and dedication led to
+              incredible results beyond what we imagined.</p>
+
+            <!-- img -->
+            <div class="flex items-center">
+              <div class=" bg-white relative -left-6 top-6 w-20 h-20  rounded-full flex items-center">
+                <img src="./assets/user-1.png" class="w-14 mx-auto" alt="">
+              </div>
+              <div class="mt-10">
+                <h1 class="text-[#1C1C1C] font-extrabold tracking-tighter text-xl">Sanjoy Shaw</h1>
+                <p class="text-secondary">Customer</p>
+              </div>
+            </div>
+          </div>
+          <!-- client say 2 -->
+          <div class="bg-[#A4DAC3] shadow p-5 rounded-bl-[80px] rounded-2xl">
+            <i class="fas fa-quote-left text-7xl mb-4 text-[#313131]"></i>
+            <p class="mb-4 text-secondary font-medium">Highly recommend! Their professionalism and innovative approach
+              made a huge difference in our project’s success.</p>
+
+            <!-- img -->
+            <div class="flex items-center">
+              <div class=" bg-white relative -left-6 top-6 w-20 h-20  rounded-full flex items-center">
+                <img src="./assets/user-2.png" class="w-14 mx-auto" alt="">
+              </div>
+              <div class="mt-10">
+                <h1 class="text-[#1C1C1C] font-extrabold tracking-tighter text-xl">GRACE MARTIN</h1>
+                <p class="text-secondary">Customer</p>
+              </div>
+            </div>
+          </div>
+          <!-- client say 3 -->
+          <div class="bg-[#77AAEA] shadow p-5 rounded-bl-[80px] rounded-2xl">
+            <i class="fas fa-quote-left text-7xl mb-4 text-[#313131]"></i>
+            <p class="mb-4 text-secondary font-medium">Amazing experience! They went above and beyond to ensure
+              everything was perfect and on time.</p>
+
+            <!-- img -->
+            <div class="flex items-center">
+              <div class=" bg-white relative -left-6 top-6 w-20 h-20  rounded-full flex items-center">
+                <img src="./assets/user-3.png" class="w-14 mx-auto" alt="">
+              </div>
+              <div class="mt-10">
+                <h1 class="text-[#1C1C1C] font-extrabold tracking-tighter text-xl">ANNA SARAH</h1>
+                <p class="text-secondary">Customer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- challange part end here -->
+
+    <!-- Read Our Articles and News start here -->
+    <section class="bg-[#F4F4F4] py-8 md:py-16">
+      <div class="w-11/12 mx-auto">
+        <!-- heading -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <a href="#" class="px-4 py-2 bg-[#ABEF5F33] rounded-3xl text-secondary font-bold"><i
+              class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp; Rinterio News</a>
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter">Read Our Articles and News</h1>
+          <p class="font-medium text-secondary">Explore our articles and news for the latest insights, trends, and
+            updates across various industries, offering valuable information to keep you informed and ahead.</p>
+        </div>
+
+        <!-- card -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-12">
+          <!-- card 1 -->
+          <div class="card  md:flex md:flex-row lg:flex-col bg-white rounded-2xl">
+            <figure class="px-6 pt-6 md:pb-6 lg:pb-0">
+              <img src="./assets/article1.png" class="w-full h-full" alt="Shoes" />
+            </figure>
+            <div class="card-body space-y-2">
+              <!-- date and admin -->
+              <div class="flex gap-4">
+                <span class="text-netural text-sm  font-medium flex"><img src="./assets/calendar.png"
+                    class="w-5 text-netural" alt="">&nbsp;&nbsp; August24, 2024</span>
+                <span class="text-netural text-sm font-medium flex"><img src="./assets/profile.png"
+                    class="w-5 text-netural" alt="">&nbsp;&nbsp; By Admin</span>
+              </div>
+              <!-- text-content -->
+              <h1 class="text-secondary text-xl font-extrabold tracking-tighter">How to choose the furniture right of
+                your home.</h1>
+              <p class="text-netural font-medium">Discover tips for choosing the perfect furniture to suit your home.
+              </p>
+              <h2 class="flex text-primary text-lg font-extrabold tracking-tighter">Read More &nbsp;&nbsp; <div
+                  class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i
+                    class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div>
+              </h2>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="card md:flex md:flex-row lg:flex-col bg-white rounded-2xl">
+            <figure class="px-6 pt-6 md:pb-6 lg:pb-0">
+              <img src="./assets/article2.png" class="w-full h-full" alt="Shoes" />
+            </figure>
+            <div class="card-body space-y-2">
+              <!-- date and admin -->
+              <div class="flex gap-4">
+                <span class="text-netural text-sm  font-medium flex"><img src="./assets/calendar.png"
+                    class="w-5 text-netural" alt="">&nbsp;&nbsp; August24, 2024</span>
+                <span class="text-netural text-sm font-medium flex"><img src="./assets/profile.png"
+                    class="w-5 text-netural" alt="">&nbsp;&nbsp; By Admin</span>
+              </div>
+              <!-- text-content -->
+              <h1 class="text-secondary text-xl font-extrabold tracking-tighter">How to choose the furniture right of
+                your home.</h1>
+              <p class="text-netural font-medium">Discover tips for choosing the perfect furniture to suit your home.
+              </p>
+              <h2 class="flex text-primary text-lg font-extrabold tracking-tighter">Read More &nbsp;&nbsp; <div
+                  class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i
+                    class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div>
+              </h2>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="card md:flex md:flex-row lg:flex-col bg-white rounded-2xl">
+            <figure class="px-6 pt-6 md:pb-6 lg:pb-0">
+              <img src="./assets/article3.png" class="w-full h-full" alt="Shoes" />
+            </figure>
+            <div class="card-body space-y-2">
+              <!-- date and admin -->
+              <div class="flex gap-4">
+                <span class="text-netural text-sm  font-medium flex"><img src="./assets/calendar.png"
+                    class="w-5 text-netural" alt="">&nbsp;&nbsp; August24, 2024</span>
+                <span class="text-netural text-sm font-medium flex"><img src="./assets/profile.png"
+                    class="w-5 text-netural" alt="">&nbsp;&nbsp; By Admin</span>
+              </div>
+              <!-- text-content -->
+              <h1 class="text-secondary text-xl font-extrabold tracking-tighter">How to choose the furniture right of
+                your home.</h1>
+              <p class="text-netural font-medium">Discover tips for choosing the perfect furniture to suit your home.
+              </p>
+              <h2 class="flex text-primary text-lg font-extrabold tracking-tighter">Read More &nbsp;&nbsp; <div
+                  class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i
+                    class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Read Our Articles and News end here -->
+
+    <!-- Let’s Connect start here -->
+    <section class="bg-Lets_connect bg-no-repeat bg-cover py-8 md:py-20 mt-2">
+      <div class="w-11/12 mx-auto">
+        <!-- heading -->
+        <div class="text-center max-w-4xl mx-auto space-y-6">
+          <a href="#" class="px-4 py-2 bg-[#ABEF5F33] rounded-3xl text-secondary font-bold"><i
+              class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp; Let’s Connect</a>
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter">Let’s Discuss Next Project</h1>
+          <p class="font-medium text-secondary">Could you please provide more details about what you're looking for in
+            the next project? Are you asking for ideas for project concepts.</p>
+        </div>
+
+        <!-- contact form fillup -->
+        <form action="#">
+          <div class="max-w-screen-md mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <!-- First Name -->
+            <div>
+              <input type="text"
+                class="p-4 border-2 border-[rgb(233, 233, 233)] w-full rounded-3xl outline-none placeholder:text-[#A0A0A0] font-medium"
+                placeholder="First Name*">
+            </div>
+            <!-- Last Name -->
+            <div>
+              <input type="text"
+                class="p-4 border-2 border-[rgb(233, 233, 233)] w-full rounded-3xl outline-none placeholder:text-[#A0A0A0] font-medium"
+                placeholder="Last Name*">
+            </div>
+            <!-- Phone Number* -->
+            <div>
+              <input type="text"
+                class="p-4 border-2 border-[rgb(233, 233, 233)] w-full rounded-3xl outline-none placeholder:text-[#A0A0A0] font-medium"
+                placeholder="Phone Number*">
+            </div>
+            <!-- Email Number* -->
+            <div>
+              <input type="text"
+                class="p-4 border-2 border-[rgb(233, 233, 233)] w-full rounded-3xl outline-none placeholder:text-[#A0A0A0] font-medium"
+                placeholder="Email Number*">
+            </div>
+            <!-- textarea -->
+
+            <textarea
+              class="md:col-span-2 resize-none rounded-3xl border-2 border-[rgb(233, 233, 233)] outline-none p-6 placeholder:text-[#A0A0A0] font-medium"
+              rows="6" placeholder="Write your message here"></textarea>
+
+            <!-- submit -->
+            <button type="submit"
+              class="bg-button_color  md:col-span-2 flex justify-center items-center py-2 gap-2 rounded-full text-xl font-extrabold">Send
+              Mail <div class="w-8 h-8 bg-[#1C1C1C] text-lg justify-center flex items-center rounded-full"><i
+                  class="fa-solid fa-arrow-right  text-white -rotate-45"></i></div></button>
+          </div>
+      </div>
+      </form>
+
+    </section>
+    <!-- Let’s Connect end here -->
+
+  </main>
+  <!-- main end here -->
+
+  <!-- footer start here -->
+  <footer class="footer footer-center bg-[#1C1C1C] py-16 px-5 mt-2 mb-1">
+    <aside>
+      <!-- button -->
+      <a class="text-3xl lg:text-3xl flex  gap-2 items-center font-extrabold text-[#E9E9E9]">
+        <div class="w-8 h-8 bg-button_color text-lg justify-center flex items-center rounded-full"><i
+            class="fa-solid fa-arrow-right  text-[#1C1C1C]  -rotate-45"></i></div> Rinterio
+      </a>
+      <p class="max-w-2xl text-netural font-medium mt-4">Rinterio offers innovative house design solutions with a focus
+        on modern aesthetics, functionality, and personalized client experiences.</p>
+    </aside>
+    <nav>
+      <div class="grid grid-flow-row md:grid-flow-col text-[#E9E9E9] gap-8 md:gap-24">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Blogs</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </nav>
+    <a
+      class="btn w-full md:w-auto bg-button_color rounded-full text-xl font-extrabold tracking-tighter mt-4 md:mt-8 text-primary flex">Book
+      Consult <div class="w-8 h-8 bg-[#1C1C1C] text-lg justify-center flex items-center rounded-full"><i
+          class="fa-solid fa-arrow-right text-white -rotate-45"></i></div></a>
+  </footer>
+  <!-- footer end here -->
 
 </body>
+
 </html>
